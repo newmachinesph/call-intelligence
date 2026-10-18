@@ -1,0 +1,32 @@
+# Credentials never enter git; templates do.
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+
+# Customer content stays out of source control.
+*.mp3
+*.wav
+*.m4a
+*.mp4
+data/
+references/
+api/resources/manuals/
+
+# Build and tool output
+node_modules/
+.next/
+.vercel/
+out/
+dist/
+build/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.tsbuildinfo
+coverage/
+.DS_Store
+Thumbs.db

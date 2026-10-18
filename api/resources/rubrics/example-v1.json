@@ -1,0 +1,329 @@
+{
+  "schema_version": 1,
+  "status": "generic example rubric; replace with your own before relying on grades",
+  "criterion_states": {
+    "met": 1,
+    "missed": 0,
+    "auto_credit": 1,
+    "not_applicable": null,
+    "not_observable": null
+  },
+  "unresolved_policy": "Any item lacking sufficient evidence keeps the score provisional with grade=null. Preserve nominal maximum.",
+  "rubrics": [
+    {
+      "id": "sales",
+      "version": "example-v1",
+      "source": "Generic example rubric. Replace with your own scoring guide.",
+      "maximum_points": 12,
+      "grade_requires_all_items_resolved": true,
+      "thresholds": [
+        {
+          "grade": "gold",
+          "minimum": 12,
+          "maximum": 12
+        },
+        {
+          "grade": "green",
+          "minimum": 10,
+          "maximum": 11
+        },
+        {
+          "grade": "below_standard",
+          "minimum": 0,
+          "maximum": 9
+        }
+      ],
+      "criteria": [
+        {
+          "id": "sales.greeting",
+          "order": 1,
+          "source_label": "Greeting",
+          "maximum_points": 1,
+          "stage_definition": "Open warmly, give your name and the business name, and invite the caller to explain why they called."
+        },
+        {
+          "id": "sales.rapport",
+          "order": 2,
+          "source_label": "Rapport",
+          "maximum_points": 1,
+          "stage_definition": "Acknowledge the caller's situation and show you understand why it matters to them."
+        },
+        {
+          "id": "sales.discovery",
+          "order": 3,
+          "source_label": "Discovery",
+          "maximum_points": 1,
+          "stage_definition": "Ask open questions about the need, its history, urgency and any constraints before proposing anything."
+        },
+        {
+          "id": "sales.needs_summary",
+          "order": 4,
+          "source_label": "Needs summary",
+          "maximum_points": 1,
+          "stage_definition": "Restate the caller's need in your own words and confirm it is right."
+        },
+        {
+          "id": "sales.present_solution",
+          "order": 5,
+          "source_label": "Present solution",
+          "maximum_points": 1,
+          "stage_definition": "Recommend a specific option that fits the confirmed need and explain how it addresses it."
+        },
+        {
+          "id": "sales.value",
+          "order": 6,
+          "source_label": "Value",
+          "maximum_points": 1,
+          "stage_definition": "Explain the benefits and what is included before the price is discussed."
+        },
+        {
+          "id": "sales.pricing",
+          "order": 7,
+          "source_label": "Pricing",
+          "maximum_points": 1,
+          "stage_definition": "State the price and terms clearly and check the caller understood them."
+        },
+        {
+          "id": "sales.acknowledge_objection",
+          "order": 8,
+          "source_label": "Acknowledge objection",
+          "maximum_points": 1,
+          "stage_definition": "When the caller hesitates or raises a concern, acknowledge it without arguing."
+        },
+        {
+          "id": "sales.clarify_objection",
+          "order": 9,
+          "source_label": "Clarify objection",
+          "maximum_points": 1,
+          "stage_definition": "Ask a question to understand the real reason behind the concern."
+        },
+        {
+          "id": "sales.resolve_objection",
+          "order": 10,
+          "source_label": "Resolve objection",
+          "maximum_points": 1,
+          "stage_definition": "Answer the concern with relevant information and check whether it is resolved."
+        },
+        {
+          "id": "sales.close",
+          "order": 11,
+          "source_label": "Close",
+          "maximum_points": 1,
+          "stage_definition": "Ask for a clear commitment, such as booking, purchasing or scheduling."
+        },
+        {
+          "id": "sales.next_steps",
+          "order": 12,
+          "source_label": "Next steps",
+          "maximum_points": 1,
+          "stage_definition": "Confirm what happens next, when, and what the caller needs to do, then thank them."
+        }
+      ],
+      "automatic_credit_rules": [
+        {
+          "id": "sales.no_objections",
+          "condition": "Complete usable transcript establishes no customer objections; unknown or incomplete coverage is ineligible.",
+          "criterion_ids": [
+            "sales.acknowledge_objection",
+            "sales.clarify_objection",
+            "sales.resolve_objection"
+          ],
+          "points_each": 1,
+          "source": "Example rule: objection handling is credited when the caller raises no objection."
+        }
+      ]
+    },
+    {
+      "id": "office",
+      "version": "example-v1",
+      "source": "Generic example rubric. Replace with your own scoring guide.",
+      "maximum_points": 10,
+      "grade_requires_all_items_resolved": true,
+      "thresholds": [
+        {
+          "grade": "gold",
+          "minimum": 10,
+          "maximum": 10
+        },
+        {
+          "grade": "green",
+          "minimum": 9,
+          "maximum": 9
+        },
+        {
+          "grade": "below_standard",
+          "minimum": 0,
+          "maximum": 8
+        }
+      ],
+      "criteria": [
+        {
+          "id": "office.greeting",
+          "order": 1,
+          "source_label": "Greeting",
+          "maximum_points": 1,
+          "stage_definition": "Open warmly, give your name and the business name, and invite the caller to explain the issue."
+        },
+        {
+          "id": "office.verify_account",
+          "order": 2,
+          "source_label": "Verify account",
+          "maximum_points": 1,
+          "stage_definition": "Confirm who the caller is and locate the right account or record."
+        },
+        {
+          "id": "office.understand_issue",
+          "order": 3,
+          "source_label": "Understand issue",
+          "maximum_points": 1,
+          "stage_definition": "Ask questions until the problem and its impact are clear."
+        },
+        {
+          "id": "office.empathy",
+          "order": 4,
+          "source_label": "Empathy",
+          "maximum_points": 1,
+          "stage_definition": "Acknowledge the inconvenience or frustration in a sincere way."
+        },
+        {
+          "id": "office.summarize_issue",
+          "order": 5,
+          "source_label": "Summarize issue",
+          "maximum_points": 1,
+          "stage_definition": "Restate the issue and confirm it is understood correctly."
+        },
+        {
+          "id": "office.resolution",
+          "order": 6,
+          "source_label": "Resolution",
+          "maximum_points": 1,
+          "stage_definition": "Resolve the issue or explain clearly what will be done to resolve it."
+        },
+        {
+          "id": "office.set_expectations",
+          "order": 7,
+          "source_label": "Set expectations",
+          "maximum_points": 1,
+          "stage_definition": "Say when and how the resolution will happen and what the caller should expect."
+        },
+        {
+          "id": "office.confirm_resolved",
+          "order": 8,
+          "source_label": "Confirm resolved",
+          "maximum_points": 1,
+          "stage_definition": "Check that the caller is satisfied with the resolution or plan."
+        },
+        {
+          "id": "office.offer_more_help",
+          "order": 9,
+          "source_label": "Offer more help",
+          "maximum_points": 1,
+          "stage_definition": "Ask whether there is anything else you can help with."
+        },
+        {
+          "id": "office.close",
+          "order": 10,
+          "source_label": "Close",
+          "maximum_points": 1,
+          "stage_definition": "End politely, thank the caller and confirm any follow-up."
+        }
+      ]
+    },
+    {
+      "id": "retention",
+      "version": "example-v1",
+      "source": "Generic example rubric. Replace with your own scoring guide.",
+      "maximum_points": 10,
+      "grade_requires_all_items_resolved": true,
+      "thresholds": [
+        {
+          "grade": "gold",
+          "minimum": 10,
+          "maximum": 10
+        },
+        {
+          "grade": "green",
+          "minimum": 9,
+          "maximum": 9
+        },
+        {
+          "grade": "below_standard",
+          "minimum": 0,
+          "maximum": 8
+        }
+      ],
+      "criteria": [
+        {
+          "id": "retention.greeting",
+          "order": 1,
+          "source_label": "Greeting",
+          "maximum_points": 1,
+          "stage_definition": "Open warmly, give your name and the business name, and invite the caller to explain the request."
+        },
+        {
+          "id": "retention.acknowledge_request",
+          "order": 2,
+          "source_label": "Acknowledge request",
+          "maximum_points": 1,
+          "stage_definition": "Acknowledge the request to cancel or downgrade without pressure."
+        },
+        {
+          "id": "retention.understand_reason",
+          "order": 3,
+          "source_label": "Understand reason",
+          "maximum_points": 1,
+          "stage_definition": "Ask why the customer wants to leave and listen to the full answer."
+        },
+        {
+          "id": "retention.empathy",
+          "order": 4,
+          "source_label": "Empathy",
+          "maximum_points": 1,
+          "stage_definition": "Show you understand the customer's reason and its importance to them."
+        },
+        {
+          "id": "retention.review_history",
+          "order": 5,
+          "source_label": "Review history",
+          "maximum_points": 1,
+          "stage_definition": "Reference the customer's history or usage to frame the conversation."
+        },
+        {
+          "id": "retention.present_options",
+          "order": 6,
+          "source_label": "Present options",
+          "maximum_points": 1,
+          "stage_definition": "Offer alternatives that address the stated reason, such as a change of plan, schedule or service."
+        },
+        {
+          "id": "retention.value_reminder",
+          "order": 7,
+          "source_label": "Value reminder",
+          "maximum_points": 1,
+          "stage_definition": "Remind the customer of the specific value they would lose."
+        },
+        {
+          "id": "retention.confirm_decision",
+          "order": 8,
+          "source_label": "Confirm decision",
+          "maximum_points": 1,
+          "stage_definition": "Confirm the customer's final decision clearly, whether they stay or leave."
+        },
+        {
+          "id": "retention.next_steps",
+          "order": 9,
+          "source_label": "Next steps",
+          "maximum_points": 1,
+          "stage_definition": "Explain what happens next, including dates, charges or changes."
+        },
+        {
+          "id": "retention.close",
+          "order": 10,
+          "source_label": "Close",
+          "maximum_points": 1,
+          "stage_definition": "Thank the customer and leave the door open for the future."
+        }
+      ]
+    }
+  ]
+}

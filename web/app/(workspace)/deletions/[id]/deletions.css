@@ -1,0 +1,8 @@
+.del-card { max-width: 640px; padding: 24px 26px; }
+.del-card h2 { font-size: 21px; }
+.del-note { color: var(--muted); font-size: 12px; line-height: 1.5; }
+.del-stores { display: grid; gap: 8px; margin: 18px 0; padding: 0; list-style: none; }
+.del-store { display: flex; justify-content: space-between; gap: 12px; padding: 13px 14px; border-radius: 9px; background: var(--inset); font-size: 12px; }
+.del-store strong { color: #8a5a12; }
+.del-complete strong { color: #136b47; }
+.del-error { color: #b42318; font-size: 12px; }
